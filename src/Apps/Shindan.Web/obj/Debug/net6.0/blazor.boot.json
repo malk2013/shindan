@@ -204,15 +204,15 @@
       "mscorlib.dll": "sha256-c1dVVfosFaf5aiS3brr2amBi1Ue0kg6mqECzmCbGyfA=",
       "netstandard.dll": "sha256-+9Yr\/gSP3tCZAMbOdAcGhHGuMcyg\/AaxVKtt3tGsvao=",
       "System.Private.CoreLib.dll": "sha256-SnxOe5QK250duVAQOw0iWr1sODhUuVEUykExQyQ\/WSk=",
-      "Shindan.Web.Core.dll": "sha256-tRSEJ3lOHjJqTGwTOaDeQPeA+qnFYckTAOkEHAHLCg8=",
-      "Shindan.Web.dll": "sha256-zZo0meDaOHhjTiay8ubOPWggxt3tZCHslWguOpnrpNU="
+      "Shindan.Web.Core.dll": "sha256-EZHA2rAG0UT6y5I8lisZZkIUeqVrIOxDX+Jdm\/5Y16c=",
+      "Shindan.Web.dll": "sha256-pSOZWzUV\/QWbiRL1JAOjzKWRfm4f\/1DI+4sAO9dfC1E="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Shindan.Web.Core.pdb": "sha256-hyZQSQwZTwuc3dvrwBJm7G3p8RnzpwPvqN+Gtb7FTj4=",
-      "Shindan.Web.pdb": "sha256-kPsnUVxN8LUKrMFFkT9VHkuf2auEmkxG3qs2\/54Mz6A="
+      "Shindan.Web.Core.pdb": "sha256-zGQD\/FN5qJpURV+XjDxiwUzATVlIYdxa5bBh9oNIGoo=",
+      "Shindan.Web.pdb": "sha256-vRdUFvfEMU7Gib5wgWrRx2yPlwwQ9WnVRmbSqTe+O4I="
     },
     "runtime": {
       "dotnet.6.0.2.xstui84o0x.js": "sha256-wbTVn69TU0+WI83iB+kky8tf\/BjZdYJeM0rUP96ur\/c=",
@@ -225,7 +225,7 @@
     },
     "satelliteResources": {
       "en": {
-        "en\/Shindan.Web.resources.dll": "sha256-cAGp\/A4h6QcYJKjyZlrQT3NqsphnnTv4pP7QQEQ26Oo="
+        "en\/Shindan.Web.resources.dll": "sha256-2ZxmDVr3UIvsMyWVZA\/NZ\/Y0J23ymB8kmEZ+j8humGQ="
       }
     }
   }

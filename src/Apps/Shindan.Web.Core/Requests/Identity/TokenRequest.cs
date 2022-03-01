@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Shindan.Web.Core.Authentication
+namespace Shindan.Web.Core.Requests.Identity
 {
     public class TokenRequest
     {

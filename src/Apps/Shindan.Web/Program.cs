@@ -20,18 +20,18 @@ builder.Services.AddMudServices();
 builder.Services.AddScoped<ShindanStateProvider>()
                 .AddScoped<AuthenticationStateProvider, ShindanStateProvider>()
                 .AddTransient<AuthenticationHeaderHandler>();
-                //.AddScoped(sp => sp
-                //    .GetRequiredService<IHttpClientFactory>()
-                //    .CreateClient("ShindanAPI").EnableIntercept(sp))
-                //.AddHttpClient("ShindanAPI", client =>
-                //{
-                //    client.DefaultRequestHeaders.AcceptLanguage.Clear();
-                //    client.DefaultRequestHeaders.AcceptLanguage.ParseAdd(CultureInfo.DefaultThreadCurrentCulture?.TwoLetterISOLanguageName);
-                //    client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress);
-                //})
-                //.AddHttpMessageHandler<AuthenticationHeaderHandler>();
+//.AddScoped(sp => sp
+//    .GetRequiredService<IHttpClientFactory>()
+//    .CreateClient("ShindanAPI").EnableIntercept(sp))
+//.AddHttpClient("ShindanAPI", client =>
+//{
+//    client.DefaultRequestHeaders.AcceptLanguage.Clear();
+//    client.DefaultRequestHeaders.AcceptLanguage.ParseAdd(CultureInfo.DefaultThreadCurrentCulture?.TwoLetterISOLanguageName);
+//    client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress);
+//})
+//.AddHttpMessageHandler<AuthenticationHeaderHandler>();
 //builder.Services.AddHttpClientInterceptor();
 
-
+builder.Services.AddAuthorizationCore();
 builder.Services.AddLocalization();
 await builder.Build().RunAsync();

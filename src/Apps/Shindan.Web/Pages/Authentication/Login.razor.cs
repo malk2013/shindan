@@ -1,7 +1,7 @@
 ﻿using Blazored.FluentValidation;
 using Microsoft.AspNetCore.Components.Authorization;
 using MudBlazor;
-using Shindan.Web.Core.Authentication;
+using Shindan.Web.Core.Requests.Identity;
 using System.Security.Claims;
 
 namespace Shindan.Web.Pages.Authentication

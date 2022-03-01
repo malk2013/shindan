@@ -125,6 +125,15 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "Microsoft.Extensions.Localization.Abstractions/6.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.Localization.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Localization.Abstractions.dll": {}
+        }
+      },
       "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
         "type": "package",
         "compile": {
@@ -389,6 +398,25 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.Extensions.Localization.Abstractions/6.0.2": {
+      "sha512": "/NKlZ66nW2qTzPsKkVxVIcJs0DLnmvlCdvU6CnrWBaebOZrxhGwUMYjOdWn2zODiV8Jg2zeHesQGsdamJ83XzQ==",
+      "type": "package",
+      "path": "microsoft.extensions.localization.abstractions/6.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Localization.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.Localization.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.Localization.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.Localization.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml",
+        "microsoft.extensions.localization.abstractions.6.0.2.nupkg.sha512",
+        "microsoft.extensions.localization.abstractions.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
       "sha512": "/HggWBbTwy8TgebGSX5DBZ24ndhzi93sHUBDvP1IxbZD7FDokYzdAr6+vbWGjw2XAfR2EJ1sfKUotpjHnFWPxA==",
       "type": "package",
@@ -647,6 +675,7 @@
     "net6.0": [
       "Blazored.LocalStorage >= 4.2.0",
       "Microsoft.AspNetCore.Components.Authorization >= 6.0.2",
+      "Microsoft.Extensions.Localization.Abstractions >= 6.0.2",
       "System.ComponentModel.Annotations >= 5.0.0"
     ]
   },
@@ -695,6 +724,10 @@
             "version": "[4.2.0, )"
           },
           "Microsoft.AspNetCore.Components.Authorization": {
+            "target": "Package",
+            "version": "[6.0.2, )"
+          },
+          "Microsoft.Extensions.Localization.Abstractions": {
             "target": "Package",
             "version": "[6.0.2, )"
           },

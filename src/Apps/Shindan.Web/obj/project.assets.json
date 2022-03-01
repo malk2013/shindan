@@ -512,6 +512,7 @@
         "dependencies": {
           "Blazored.LocalStorage": "4.2.0",
           "Microsoft.AspNetCore.Components.Authorization": "6.0.2",
+          "Microsoft.Extensions.Localization.Abstractions": "6.0.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -1027,6 +1028,7 @@
         "dependencies": {
           "Blazored.LocalStorage": "4.2.0",
           "Microsoft.AspNetCore.Components.Authorization": "6.0.2",
+          "Microsoft.Extensions.Localization.Abstractions": "6.0.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
