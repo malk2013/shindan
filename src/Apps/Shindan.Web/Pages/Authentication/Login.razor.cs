@@ -19,13 +19,19 @@ namespace Shindan.Web.Pages.Authentication
         protected override async Task OnInitializedAsync()
         {
             var state = await _stateProvider.GetAuthenticationStateAsync();
-            if (state != new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity())))
-            {
-                _navigationManager.NavigateTo("/");
-            }
+            //if (state != new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity())))
+            //{
+            //    _navigationManager.NavigateTo("/");
+            //}
         }
         private async Task SubmitAsync()
         {
+            var result = await _authenticationManager.Login(_tokenModel);
+            if (result.Succeeded)
+            {
+                //_snackBar.Add(string.Format(_localizer["Welcome {0}"], _tokenModel.Email), Severity.Success);
+                _navigationManager.NavigateTo("/", true);
+            }
             //var result = await _authenticationManager.Login(_tokenModel);
             //if (result.Succeeded)
             //{

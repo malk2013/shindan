@@ -43,6 +43,7 @@ namespace Shindan.Api
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddApplication();
             services.AddInfrastructure(Configuration);
 
@@ -123,7 +124,11 @@ namespace Shindan.Api
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            app.UseCors(x => x
+                 .AllowAnyMethod()
+                 .AllowAnyHeader()
+                 .SetIsOriginAllowed(origin => true) // allow any origin
+                 .AllowCredentials()); // allow credentials
             app.UseHealthChecks("/health");
 
             app.UseHttpsRedirection();

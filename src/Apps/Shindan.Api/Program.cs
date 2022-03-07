@@ -66,6 +66,7 @@ namespace Shindan.Api
         /// <returns></returns>
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+            
                 .UseSerilog(((context, configuration) =>
                 {
                     configuration.Enrich.FromLogContext()
@@ -83,9 +84,12 @@ namespace Shindan.Api
                         .Enrich.WithProperty("Environment", context.HostingEnvironment.EnvironmentName)
                         .ReadFrom.Configuration(context.Configuration);
                 }))
+            
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("http://localhost:5010", "https://localhost:5011");
                 });
     }
 }

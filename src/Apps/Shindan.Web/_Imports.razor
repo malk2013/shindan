@@ -18,6 +18,8 @@
 
 
 @using Shindan.Web.Core.Authentication.Infrastructure
+@using Shindan.Web.Core.Managers.Identity.Authentication
+@using Shindan.Web.Core.Managers.Interceptors
 @using Shindan.Web.Shared
 @using Shindan.Web.Core.Authentication
 
@@ -25,7 +27,9 @@
 
 
 @attribute [Authorize]
-@*@inject IAuthenticationManager _authenticationManager*@
+@inject IAuthenticationManager _authenticationManager
 @inject NavigationManager _navigationManager
 @inject ShindanStateProvider _stateProvider
-@inject ILocalStorageService _localStorage;
+@inject HttpClient _httpClient
+@inject IHttpInterceptorManager _interceptor
+@inject ILocalStorageService _localStorage
