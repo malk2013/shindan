@@ -1,0 +1,42 @@
+﻿<MudSelect T="string" Label="Finacial Year" HelperText="Pick your favorite states with keys" MultiSelection="true" @bind-Value="CurrentFY" @bind-SelectedValues="options">
+    @foreach (var FY in FYList)
+    {
+        <MudSelectItem T="string" Value="@FY">@FY</MudSelectItem>
+    }
+</MudSelect>
+@code {
+    static List<string> FYList = new List<string>(); 
+    private static string CurrentFY { get; set; }
+    private static IEnumerable<string> options { get; set; } = GetFinancialYear(DateTime.Now); 
+    public static List<string> GetFinancialYear(DateTime curDate)
+    {
+
+        int CurrentYear = curDate.Year;
+
+        int TenYearsBefore = curDate.Year - 10;
+        CurrentFY = Convert.ToString(curDate.Year - 1) + "" + Convert.ToString(curDate.Year);
+        while (CurrentYear > TenYearsBefore)
+        {
+            //int CurrentYear = curDate.Year;
+            int PreviousYear = (curDate.Year - 1);
+            int NextYear = (curDate.Year + 1);
+            string PreYear = PreviousYear.ToString();
+            string NexYear = NextYear.ToString();
+            string CurYear = CurrentYear.ToString();
+            string FinYear = string.Empty;
+            if (curDate.Month > 3)
+            {
+                FinYear = CurYear + "-" + NexYear;
+            }
+            else
+            {
+                FinYear = PreYear + "-" + CurYear;
+            }
+            FYList.Add(FinYear);
+            CurrentYear--;
+        }
+        return FYList;
+
+    }
+
+}
